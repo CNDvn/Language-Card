@@ -1,19 +1,20 @@
-package cnd.englishcard.entity;
+package cnd.languagecard.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
+@EqualsAndHashCode
 @Table(name="tbl_word")
-public class WordEntity {
+public class WordEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -25,7 +26,11 @@ public class WordEntity {
     private String audio;
     @Column
     private String description;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "group_id", referencedColumnName = "id")
     private GroupEntity group;
+
+    @OneToMany(mappedBy = "word")
+    private Set<UserWordEntity> users = new HashSet<>();
 }

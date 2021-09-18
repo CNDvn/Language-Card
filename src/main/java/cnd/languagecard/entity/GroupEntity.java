@@ -1,4 +1,4 @@
-package cnd.englishcard.entity;
+package cnd.languagecard.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.*;
 
 @Getter
@@ -14,7 +15,7 @@ import java.util.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "tbl_group")
-public class GroupEntity {
+public class GroupEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

@@ -1,6 +1,6 @@
-package cnd.englishcard.repository;
+package cnd.languagecard.repository;
 
-import cnd.englishcard.entity.GroupEntity;
+import cnd.languagecard.entity.GroupEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

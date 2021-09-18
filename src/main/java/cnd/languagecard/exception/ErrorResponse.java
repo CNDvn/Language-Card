@@ -1,4 +1,4 @@
-package cnd.englishcard.exception;
+package cnd.languagecard.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

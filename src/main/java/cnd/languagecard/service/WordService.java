@@ -1,4 +1,4 @@
-package cnd.englishcard.service;
+package cnd.languagecard.service;
 
 public interface WordService {
 }

@@ -1,21 +1,19 @@
-package cnd.englishcard.converter;
+package cnd.languagecard.converter;
 
-import cnd.englishcard.dto.GroupDto;
-import cnd.englishcard.entity.GroupEntity;
+import cnd.languagecard.dto.group.GroupResponse;
+import cnd.languagecard.entity.GroupEntity;
 import org.springframework.stereotype.Component;
-
-import java.util.Date;
 
 @Component
 public class GroupConverter {
-    public GroupEntity toEntity(GroupDto dto){
+    public GroupEntity toEntity(GroupResponse dto){
         GroupEntity entity = new GroupEntity();
         entity.setName(dto.getName());
         return entity;
     }
 
-    public GroupDto toDto(GroupEntity entity){
-        GroupDto dto = new GroupDto();
+    public GroupResponse toDto(GroupEntity entity){
+        GroupResponse dto = new GroupResponse();
         dto.setName(entity.getName());
         dto.setId(entity.getId());
         return dto;

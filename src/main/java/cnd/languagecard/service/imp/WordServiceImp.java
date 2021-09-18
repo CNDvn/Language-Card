@@ -1,6 +1,6 @@
-package cnd.englishcard.service.imp;
+package cnd.languagecard.service.imp;
 
-import cnd.englishcard.service.WordService;
+import cnd.languagecard.service.WordService;
 import org.springframework.stereotype.Service;
 
 @Service

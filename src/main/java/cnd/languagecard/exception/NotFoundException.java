@@ -1,4 +1,4 @@
-package cnd.englishcard.exception;
+package cnd.languagecard.exception;
 
 public class NotFoundException extends RuntimeException{
     public NotFoundException(String message){

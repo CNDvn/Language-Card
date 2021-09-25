@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>english-card</name>
     <description>english-card</description>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -54,11 +54,6 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
         </dependency>
-        <dependency>
-            <groupId>jboss.web</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.1.0.GA</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -74,6 +69,11 @@
                         </exclude>
                     </excludes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.3</version>
             </plugin>
         </plugins>
     </build>

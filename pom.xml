@@ -53,6 +53,11 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
         </dependency>
+        <dependency>
+            <groupId>jboss.web</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.1.0.GA</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -67,16 +72,6 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.3</version>
-                <configuration>
-                    <processTypes>
-                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* EnglishCardApplication</web>
-                    </processTypes>
                 </configuration>
             </plugin>
         </plugins>

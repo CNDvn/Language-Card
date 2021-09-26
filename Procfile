@@ -1,1 +1,1 @@
-web: java -Dserver.port=8888 -jar target/english-card-0.0.1-SNAPSHOT.jar
+web: java -jar target/english-card-0.0.1-SNAPSHOT.jar

@@ -12,6 +12,7 @@
     <artifactId>english-card</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>english-card</name>
+    <packaging>jar</packaging>
     <description>english-card</description>
     <properties>
         <java.version>1.8</java.version>

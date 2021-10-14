@@ -6,16 +6,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Setter
 @Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "tbl_user_word")
-@IdClass(UserWordId.class)
-public class UserWordEntity implements Serializable {
+@Table(name = "tbl_user_group")
+@IdClass(UserGroupId.class)
+public class UserGroupEntity {
 
     @Id
     @ManyToOne(cascade = CascadeType.ALL)
@@ -24,9 +23,9 @@ public class UserWordEntity implements Serializable {
 
     @Id
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_word", referencedColumnName = "id")
-    private WordEntity word;
+    @JoinColumn(name = "id_group", referencedColumnName = "id")
+    private GroupEntity group;
 
     @Column
-    private Integer mastery; //how many time to loop this word for this user
+    private Boolean owner;
 }

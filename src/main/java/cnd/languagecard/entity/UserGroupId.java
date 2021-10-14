@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Setter
 @Getter
 @EqualsAndHashCode
-public class UserWordId implements Serializable {
+public class UserGroupId implements Serializable {
     private UserEntity user;
-    private WordEntity word;
+    private GroupEntity group;
 }

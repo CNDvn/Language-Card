@@ -29,5 +29,5 @@ public class UserEntity implements Serializable {
     private String name;
 
     @OneToMany(mappedBy = "user")
-    private Set<UserWordEntity> listWord = new HashSet<>();
+    private Set<UserGroupEntity> groups = new HashSet<>();
 }

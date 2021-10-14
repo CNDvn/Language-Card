@@ -25,4 +25,6 @@ public class GroupEntity implements Serializable {
     private Date createDate;
     @OneToMany(mappedBy = "group")
     private Set<WordEntity> words = new HashSet<>();
+    @OneToMany(mappedBy = "group")
+    private Set<UserGroupEntity> users = new HashSet<>();
 }

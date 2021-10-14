@@ -30,7 +30,4 @@ public class WordEntity implements Serializable {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "group_id", referencedColumnName = "id")
     private GroupEntity group;
-
-    @OneToMany(mappedBy = "word")
-    private Set<UserWordEntity> users = new HashSet<>();
 }

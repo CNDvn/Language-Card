@@ -1,1 +1,0 @@
-web: java -jar target/english-card-0.0.1-SNAPSHOT.jar
